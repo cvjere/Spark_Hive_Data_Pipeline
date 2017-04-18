@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+
+    <repositories>
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+        <repository>
+            <id>Maven</id>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>clojars</id>
+            <url>http://clojars.org/repo/</url>
+        </repository>
+        <repository>
+            <id>m2.java.net</id>
+            <name>Java.net Maven 2 Repository</name>
+            <url>http://download.java.net/maven/2</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>scala-tools.org</id>
+            <name>Scala-tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>cloudera-repos</id>
+            <name>Cloudera Repos</name>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <groupId>geo.company.dept</groupId>
+    <artifactId>usecase</artifactId>
+    <version>0.2-SNAPSHOT</version>
+   
+
+    <properties>
+        <avro.version>1.7.6-cdh5.7.2</avro.version>
+        <parquet.version>1.5.0-cdh5.7.2</parquet.version>
+    </properties>
+
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+      <!--  </plugins> -->
+
+        <!--
+          <plugins>
+              <plugin>
+                  <groupId>org.scala-tools</groupId>
+                  <artifactId>maven-scala-plugin</artifactId>
+                  <version>2.15.2</version>
+                  <executions>
+                      <execution>
+                          <goals>
+                              <goal>compile</goal>
+                              <goal>testCompile</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+              <plugin>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <configuration>
+                      <source>1.5</source>
+                      <target>1.5</target>
+                  </configuration>
+              </plugin>
+
+              <plugin>
+                  <artifactId>maven-assembly-plugin</artifactId>
+                  <configuration>
+                      <descriptorRefs>
+                          <descriptorRef>jar-with-dependencies</descriptorRef>
+                      </descriptorRefs>
+                  </configuration>
+                  <executions>
+                      <execution>
+                          <id>make-assembly</id>
+                          <phase>package</phase>
+                          <goals>
+                              <goal>single</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+       -->
+        </plugins>
+    </build>
+
+     <dependencies>
+         <!--
+              <dependency>
+                  <groupId>org.apache.avro</groupId>
+                  <artifactId>avro-mapred</artifactId>
+                  <version>1.7.6-cdh5.5.0</version>
+              </dependency>
+             -->
+         <!-- spark core -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>1.6.0-cdh5.7.2</version>
+
+        </dependency>
+
+         <dependency>
+             <groupId>com.databricks</groupId>
+             <artifactId>spark-csv_2.10</artifactId>
+             <version>1.4.0</version>
+         </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-assembly_2.10</artifactId>
+            <version>1.6.0-cdh5.7.2</version>
+
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+            <version>1.6.0-cdh5.7.2</version>
+        </dependency>
+
+        <!-- hive -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_2.10</artifactId>
+            <version>1.6.0-cdh5.7.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-metastore</artifactId>
+            <version>1.1.0-cdh5.7.2</version>
+        </dependency>
+        <!-- spark streaming -->
+
+    <dependency>
+	   <groupId>org.apache.maven.surefire</groupId>
+	   <artifactId>surefire-junit3</artifactId>
+	<version>2.10</version>
+</dependency>
+
+        <dependency>
+            <groupId>org.jboss.netty</groupId>
+            <artifactId>netty</artifactId>
+            <version>3.2.2.Final</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
+

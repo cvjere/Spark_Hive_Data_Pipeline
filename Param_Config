@@ -1,0 +1,39 @@
+#!/bin/bash
+##
+#@(#)*************************************************************************************
+#@(#)** FILE NAME     : sample_Config
+#@(#)**
+#@(#)** CREATION DATE : 12/09/2016
+#@(#)** VERSION       : 1.0
+#@(#)**
+#@(#)** DESCRIPTION :
+#@(#)**  Loading parameter script
+#@(#)**
+#@(#)** PARAMETERS  : none
+#@(#)**      
+#@(#)**
+#@(#)*************************************************************************************
+#@(#)** MODIFICATIONS HISTORY :
+#@(#)**
+#@(#)**  Date         Name           	Change
+#@(#)**  ----------   --------------    ---------------
+#@(#)**  12/09/2016   Ashoka Sangapallar    Initial version
+#@(#)*************************************************************************************
+
+NAME_NODE_URL='hdfs://quickstart.cloudera:8020'
+HIVE_METASTORE_URL='quickstart.cloudera:9083'
+HIVE_FACT_DB='example'
+PRECIP_FILE_LOCATION='/user/cloudera/hadoopproject/input/201505precip.txt'
+CITY_STATE_MSA_FILE_LOCATION='/user/cloudera/hadoopproject/input/city_state_msa_fixed.txt'
+OUTPUT_FILE_LOCATION='/user/cloudera/hadoopproject/output/wettestpopulation'
+#
+p_numReducers=1
+p_numInputPartitions=1
+
+
+#--------------------------
+#EMAIL parameters
+#--------------------------
+#EMAIL_ADDRESS=
+
+
